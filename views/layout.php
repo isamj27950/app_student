@@ -2,12 +2,13 @@
 //demarage de la session
 session_start();
 
-require_once('helpers/pdo.php');
+//require_once('helpers/pdo.php');
 include ("helpers/data.php");
-include('helpers/functions.php');
+include_once('helpers/functions.php');
+
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +27,7 @@ include('helpers/functions.php');
      <script src="https://cdn.tailwindcss.com"></script>
 
    
-    <title>Happy School</title>
+    <title>Happy School | <?$title?></title>
 </head>
 <body >
     <!--header  -->
@@ -45,5 +46,26 @@ include('helpers/functions.php');
     </nav>
  </header>
  <main class="px-24 py-20 flex flex-col min-h-screen"> 
+    <!-- <?php titleH1($title)?> -->
+    <?=$content ?>
     
+ <!-- footer -->
+</main>
+<footer class ="bg-fuchsia-600 p-14 text-sky-500   max-w-full  ">
+    <p class ="text-center text-2xl font-black">Welcome to Happy School</p>
     
+<div class="footer_icon_container pt-8 text-3xl text-center uppercase  ">
+				<a href="https://www.facebook.com/" target="_blank">
+					<i class="fa-brands fa-facebook pl-1.5 pr-1.5 text-sky-300 "></i>
+				</a>
+				<a href="https://www.instagram.com/" target="_blank">
+					<i class="fa-brands fa-instagram pl-1.5 pr-1.5 text-sky-300"></i>
+				</a>
+				<a href="https://www.youtube.com/" target="_blank">
+					<i class="fa-brands fa-youtube pl-1.5 pr-1.5 text-sky-300"></i>
+				</a>
+			</div>
+</footer>
+    
+</body>
+</html>

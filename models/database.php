@@ -1,4 +1,10 @@
 <?php
+/**
+ * 
+ */
+function pdo()
+{
+
 //1-creation des variables
 $serveur ="localhost";
 $dbname ="escci_app_student";
@@ -13,7 +19,10 @@ try {
         //Voir les erreurs
         PDO::ATTR_ERRMODE =>PDO::ERRMODE_WARNING
     ));
+
+    return $pdo;
    // echo "TOTO a réussi à se connecter!!!!";
 } catch (PDOException $e) {
     echo 'Erreur de connection : ' .$e->getMessage();
+}
 }
