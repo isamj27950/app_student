@@ -1,6 +1,6 @@
 <?php 
 //demarage de la session
-session_start();
+//session_start();
 
 //require_once('helpers/pdo.php');
 include ("helpers/data.php");
@@ -45,8 +45,8 @@ include_once('helpers/functions.php');
     <?php } ?>
     </nav>
  </header>
- <main class="px-24 py-20 flex flex-col min-h-screen"> 
-    <!-- <?php titleH1($title)?> -->
+ <main class="px-24 py-20 flex flex-col min-h-screen "> 
+     <?php titleH1($title)?>
     <?=$content ?>
     
  <!-- footer -->

@@ -1,8 +1,12 @@
 <?php 
-//1-demande à model de lui donner ts les étudiants
-require_once('models/model.php');
 //titre de la page
 $title ="Liste De Nos Etudiants";
+
+session_start();
+
+//1-demande à model de lui donner ts les étudiants
+require_once('models/model.php');
+
 
 //query for get all students
 $students =getALL('students','fName');

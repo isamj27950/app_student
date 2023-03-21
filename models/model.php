@@ -78,3 +78,22 @@ function get($table)
     }
     return $item;
 }
+
+function delete($table)
+{
+    global $pdo;
+    $id = getId();
+    //faire la requette
+    $sql = "DELETE FROM $table where id= :id";
+    // prépare la requette
+    $query = $pdo->prepare($sql);
+    //associe la valeur à un parametre
+    $query->bindValue(':id', $id, PDO::PARAM_INT);
+    //execute ma requette
+    $query->execute();
+    $_SESSION["success"] ="L'élément a bien été supprimé avec succés!!";
+    //redirect
+    header('location: index.php');
+
+
+}

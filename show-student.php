@@ -1,6 +1,6 @@
 <?php 
 $title ="Information sur l'étudiant";
-//titleH1($title);
+session_start();
 $styleLabel = "font-bold uppercase";
 $style ="pb-3 text-xl";
 
